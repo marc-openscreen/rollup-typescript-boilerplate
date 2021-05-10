@@ -1,0 +1,36 @@
+{
+  "name": "rollup-typescript-boilerplate",
+  "version": "0.1.0",
+  "description": "Starter boilerplate that uses Rollup to bundle TypeScript code into CommonJS, ESM and UMD outputs.",
+  "homepage": "https://github.com/varicent-tq/tq-devops",
+  "repository": "https://github.com/marc-openscreen/rollup-typescript-boilerplate",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Marc Bouchard",
+    "email": "marc.bouchard@openscreen.com",
+    "url": "https://github.com/marc-openscreen"
+  },
+  "main": "dist/how-long-till-lunch.cjs.js",
+  "module": "dist/how-long-till-lunch.esm.js",
+  "browser": "dist/how-long-till-lunch.umd.js",
+  "files": ["dist"],
+  "dependencies": {
+    "ms": "^2.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/ms": "^0.7.31",
+    "rollup": "^2.47.0",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.2.0",
+    "typescript": "^3.9.9"
+  },
+  "scripts": {
+    "build": "rollup --config",
+    "dev": "npm run build -- --watch",
+    "pretest": "npm run build",
+    "test": "ts-node test/test.ts"
+  }
+}
